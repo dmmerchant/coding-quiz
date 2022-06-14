@@ -234,7 +234,7 @@ function resetHighScore() {
 function renderHighScores() {
   scoreRecordsEl.innerHTML = ''
   storedHighScores = JSON.parse(localStorage.getItem("allHighScores"));
-  if (!storedHighScores){
+  if (storedHighScores){
     if (storedHighScores.length === 0) {
       storedHighScores = []
       noHighScoresEl.style.display = 'unset';
