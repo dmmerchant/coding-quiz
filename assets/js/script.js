@@ -135,7 +135,6 @@ function generateQuestion() {
     //Select a question from random
     i = Math.floor(Math.random() * remainingQuestions.length);
     var currentQuestion = remainingQuestions[i];
-    console.log(allQuestions[i].options)
     //Populate the screen with the question
     questionEl.textContent = currentQuestion.question;
 
