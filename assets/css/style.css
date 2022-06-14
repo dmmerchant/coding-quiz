@@ -1,0 +1,156 @@
+/* Variables for setting the color pallette */
+:root {
+    --primary: darkcyan;
+    --primary-dark:rgb(0, 51, 51);
+    --primary-light:rgb(1, 219, 219);
+    --secondary: rgb(124, 45, 124);
+    --secondary-dark: rgb(61, 23, 61);
+    --secondary-light:rgb(202, 75, 202);
+    --text-light:#ffffff;
+    --text-dark: black;
+  }
+
+body {
+    display: flex;
+    flex-direction: column;
+}
+
+button {
+    flex: 0 0 auto;
+    padding: 5px;
+}
+
+/* This is the formatting for the header */
+header {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: center;
+    background-color: var(--secondary-dark);
+    padding:10px;
+    color: var(--text-light);
+    text-align: center;
+}
+nav {
+    align-self: center;
+}
+
+
+/* This is the formatting for the main section */
+main{
+    display: flex;
+    flex-direction: column;
+    flex:1;
+    align-items: center;
+    background-color: var(--primary);
+}
+
+section{
+    justify-content: center;
+    margin-top: 100px;
+    width: 100%;
+}
+
+/* This is the formatting for the response section */
+#responses{
+    width: auto;
+    list-style: unset;
+    list-style-type: upper-alpha;
+    list-style-position: inside;
+    padding: 15px;
+}
+
+.response {
+    text-align: left;
+    margin: 2px;
+    padding: 5px;
+    background-color: var(--secondary-dark);
+    border: solid 1px rgb(0, 0, 0);
+    color:var(--text-light);
+    font-weight: bold;
+}
+.response:hover {
+    background-color: var(--secondary-light);
+    color:var(--text-dark);
+}
+
+/* This is the styling for the High Scores */
+#score-records{
+    width: auto;
+    list-style: unset;
+    list-style-type: decimal;
+    list-style-position: inside;
+    padding: 15px;
+}
+
+#score-records li:first-child {
+    font-weight: bold;
+}
+
+
+/* Generic Classes */
+.card{
+    display:flex;
+    flex: 0 1 auto;
+    flex-direction: column;
+    text-align: center;
+    width:90%;
+    max-width: 500px;
+    background-color: var(--primary-light);
+    border: solid 2px var(--secondary-dark);
+}
+.card-header {
+    display: flex;
+    padding: 5px;
+    background-color: var(--primary-dark);
+    color: var(--text-light);
+
+}
+.card-body {
+    display:flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 20px;
+}
+.card-body form {
+    display: inline;
+}
+.card-footer {
+    display: flex;
+    padding: 5px;
+    background-color: var(--primary-dark);
+    color: var(--text-light);
+}
+
+.justify-center{
+    justify-content: center;
+}
+.justify-space-between{
+    justify-content: space-between;
+}
+.justify-space-around{
+    justify-content: space-around;
+}
+
+.message{
+    display: none;
+    padding:5px;
+    border: solid 1px white;
+    border-radius: 5px;
+}
+.wrong{
+    color:white;
+    background-color: rgb(78, 11, 11);
+}
+.correct{
+    color:white;
+    background-color: rgb(13, 56, 13);
+}
+
+@media screen and (max-width: 768px) {
+    header{
+        flex-direction: column;
+        justify-content: center;
+    }
+}

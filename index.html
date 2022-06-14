@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8"/>
+    <title>Coding Quiz</title>
+    <link rel="stylesheet" href="./assets/css/reset.css">
+    <link rel="stylesheet" href="./assets/css/style.css"/>
+</head>
+<body>
+
+<header>
+<h1>Coding Knowledge Evalutation</h1>
+<nav>
+        <button id="home-screen">Home Screen</button>
+        <button id="nav-high-scores"> High Scores</button>
+</nav>
+
+</header>
+<main>
+    <section id="index">
+        <div class="card">
+            <div class="card-header justify-center">
+                <h2>Welcome!</h2>
+            </div>
+            <div class="card-body">
+                <strong>This quiz will challenge your coding knowlege base.</strong>
+                <br>
+                <p>Try to answer the following questions within the time limit.</p>
+                <br>
+                <p>Every wrong answer will penalize your score and your time will decrease by ten seconds.</p>
+                <br>
+                <strong>Good Luck!!!</strong>
+            </div>
+            <div class="card-footer justify-center">
+                <button id="start-quiz">Start Quiz</button>
+            </div>
+        </div>
+    </section>
+    <section id="question-box">
+        <div class="card">
+            <div class="card-header justify-space-between">
+                <p>Quiz in process...</p>
+                <p>Timer:<strong id="timer"></strong></p>
+            </div>
+            <div class="card-body">
+                <h2 id="question">Quiz In Process</h2>
+                <ol id="responses" class="card-body"></ol>
+            </div>
+            <div class="card-footer justify-center">
+                <p id="response-result" class="message"></p>
+            </div>
+            
+        </div>
+    </section>
+    <section id="results">
+        <div class="card">
+            <div class="card-header justify-center">
+                <h2 id="endMessage"></h2>
+            </div>
+            <div class="card-body">
+                <p>Your final score is: <strong id="userScore"></strong></p>
+                <br>
+                <form>
+                        <label>Enter Initials:</label>
+                        <input type="text" id="userInitials" />
+                    <button id="add-score">Submit</button>
+                </form>
+            </div>
+            <div class="card-footer justify-center">
+                <p id="no-initials" class="message"></p>
+            </div>
+            
+            
+            
+        </div>       
+    </section>
+    <section id="high-scores">
+        <div class="card">
+            <div class="card-header  justify-center">
+                <h2>HIGH SCORES</h2>
+            </div>
+            <div class="card-body">
+                <p id="no-high-scores">There are currently no high scores.</p>
+                <ol id="score-records">
+                </ol>
+            </div>
+            <div class="card-footer justify-center">
+                <nav>
+                    <button id="restart-quiz">Start Quiz</button>
+                    <button id="reset-scores">Reset Scores</button>
+                </nav>
+            </div>            
+        </div>
+    </section>
+</main>
+
+
+<script type="text/javascript"  src="./assets/js/script.js"></script>
+</body>
+</html>
