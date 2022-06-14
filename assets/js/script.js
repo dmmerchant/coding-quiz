@@ -234,16 +234,20 @@ function resetHighScore() {
 function renderHighScores() {
   scoreRecordsEl.innerHTML = ''
   storedHighScores = JSON.parse(localStorage.getItem("allHighScores"));
-  if (!storedHighScores || storedHighScores.length === 0) {
-    storedHighScores = []
-    noHighScoresEl.style.display = 'unset';
+  if (!storedHighScores){
+    if (storedHighScores.length === 0) {
+      storedHighScores = []
+      noHighScoresEl.style.display = 'unset';
+    } else {
+      noHighScoresEl.style.display = 'none'
+      storedHighScores.forEach(score => {
+        var highScoreEl = document.createElement('li');
+        highScoreEl.textContent = score.initials + ' - ' + score.score;
+        scoreRecordsEl.appendChild(highScoreEl);
+      })
+    }
   } else {
-    noHighScoresEl.style.display = 'none'
-    storedHighScores.forEach(score => {
-      var highScoreEl = document.createElement('li');
-      highScoreEl.textContent = score.initials + ' - ' + score.score;
-      scoreRecordsEl.appendChild(highScoreEl);
-    })
+    resetHighScore();
   }
   
 }
